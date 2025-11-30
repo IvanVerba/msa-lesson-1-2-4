@@ -1,9 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
+from db.models import db
 
-db = SQLAlchemy()
-
-class Delivery(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    order_id = db.Column(db.Integer, nullable=False)
-    status = db.Column(db.String(20), nullable=False)
-
+def init_db():
+    db.create_all()
