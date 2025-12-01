@@ -10,6 +10,9 @@ COPY . /app
 # Устанавливаем зависимости
 RUN pip install --no-cache-dir -r requirements.txt
 
+# открываем порт
+EXPOSE 5001
+
 # Определяем команду для запуска приложения
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5001"]
+CMD ["python", "app.py"]
 
