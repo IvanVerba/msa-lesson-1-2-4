@@ -3,7 +3,7 @@ from db.models import db, Delivery
 from utils.db_utils import init_db
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@db:5432/logistics'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@db:5432/orders'
 db.init_app(app)
 
 @app.route('/deliveries', methods=['POST'])
